@@ -25,7 +25,7 @@ jobs:
 
       - name: Run checker
         run: |
-          printf '2\nusernames.txt\n3\n' | python checker.py
+          printf '2\nusernames.txt\n3\nn\n' | python checker.py
 
       - name: Save results
         if: always()
