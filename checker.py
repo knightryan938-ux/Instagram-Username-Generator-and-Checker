@@ -181,6 +181,7 @@ class InstagramChecker:
                 self.update_proxy()
                 time.sleep(1)
                 return self.check_username(username, attempt + 1)
+            logger.err("Unexpected HTTP response", username=username, status_code=status_code)
             return "unknown"
         except Exception as exc:
             if attempt < 3:
